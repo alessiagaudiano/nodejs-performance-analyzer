@@ -1,0 +1,17 @@
+{
+  "total_rows": 303853,
+  "high_cpu_count": 303853,
+  "high_cpu_ratio": null,
+  "long_gc_pauses_count": 0,
+  "major_ratio": 0.0104,
+  "overhead_slope_mb_per_min": 0.0,
+  "overhead_trend_positive": false,
+  "messages": [
+    "Total rows in filter: 303,853.",
+    "High-CPU samples: N/A.",
+    "Long GC pauses: 0.",
+    "Heavy memory cleanups (can pause the app): 1% of cleanups.",
+    "Memory used outside the JS heap is flat (±0.00 MB/min).",
+    "Outside-heap memory trend: flat."
+  ]
+}    

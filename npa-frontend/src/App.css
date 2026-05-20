@@ -1,0 +1,147 @@
+/*:root {
+  --primary-blue: #2584FF;
+  --dark-blue: #0B1F3A;
+  --light-blue: #F5F9FF;
+  --gray-100: #F8FAFC;
+  --gray-200: #E9ECEF;
+  --gray-700: #64748B;
+  --white: #FFFFFF;
+  --shadow-sm: 0 2px 6px rgba(11,31,58,0.06);
+  --shadow-md: 0 6px 18px rgba(11,31,58,0.09);
+}
+
+/* Global base 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+.App {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Selection container (homepage) 
+.selection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.apps-grid, .app-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 12px 0;
+}
+
+.app-item, .app-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.app-item:hover, .app-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-blue);
+}
+
+/* Dashboard 
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.chart-container, .metrics-chart {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+}
+
+/* Utility 
+.metric-value { font-weight: 600; color: var(--dark-blue); }
+.metric-label { color: var(--gray-700); }
+
+@media (max-width: 640px) {
+  .apps-grid { grid-template-columns: 1fr; }
+  .chart-container { padding: 12px; }
+}
+*/
+
+/* * src/App.css - Central Theme and Tailwind Directives *
+ * This file consolidates all global styles to ensure the theme is applied correctly 
+ * and Tailwind is initialized, addressing the dependency issue reported.
+ */
+
+/* 1. TAILWIND DIRECTIVES: ESSENTIAL */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. CSS VARIABLES (Theme) */
+:root {
+  /* Lighter dark palette */
+  --bg: #0f172a;
+  --surface: #17223a;
+  --surface-2: #1e2a44;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #34d399;   /* success */
+  --warn: #fbbf24;     /* warning */
+  --danger: #f87171;   /* danger */
+}
+
+/* 3. GLOBAL BASE STYLING
+ * This sets the base background and text colors for the entire application, 
+ * overriding any browser or default stylesheet rules to ensure the dark theme.
+ */
+html, body, #root { 
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. REUSABLE COMPONENTS
+ * Custom utility classes that combine multiple Tailwind classes.
+ */
+@layer components {
+  .container { @apply mx-auto px-4; max-width: 1200px; }
+  .card { background: var(--surface-2); border: 1px solid #23304d; border-radius: 8px; padding: 16px; }
+  .card-tight { background: var(--surface-2); border: 1px solid #23304d; border-radius: 8px; padding: 12px; }
+  .btn { @apply inline-flex items-center justify-center rounded-md text-sm font-medium; padding: 8px 12px; }
+  .btn-primary { background: var(--accent); color: #0b0b0b; }
+  .btn-ghost { background: var(--surface); color: var(--text); }
+  .btn-muted { background: transparent; color: var(--muted); }
+  .input, .select { background: var(--surface); color: var(--text); border: 1px solid #23304d; border-radius: 6px; padding: 8px 10px; }
+  .badge { @apply inline-flex items-center rounded-full text-xs font-medium; padding: 2px 8px; }
+  .badge-accent { background: #1f3a33; color: var(--accent); }
+  .badge-warn { background: #3b2f12; color: var(--warn); }
+}
+/* 5. SELECT DROPDOWN colors */
+select option {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+  padding: 8px !important;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: var(--surface-2) !important;
+  color: var(--accent) !important;
+}

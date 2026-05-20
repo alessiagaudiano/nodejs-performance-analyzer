@@ -1,0 +1,35 @@
+{
+        "app_name": "lebab",
+        "gc_types": [
+          "s",
+          "mc"
+        ],
+        "time_range": {
+          "start_ts": 3,
+          "end_ts": 57270
+        },
+        "run_status": {
+          "crash_detected": [
+            false,
+            true
+          ],
+          "failed": [
+            false,
+            true
+          ],
+          "oom_detected": [
+            false,
+            true
+          ]
+        },
+        "heap_capacity_mb_bins": [
+          128
+        ],
+        "cpu_active": {
+          "min": 10012173.0,
+          "p50": 16250866.0,
+          "p95": 31020965.0,
+          "max": 31109413.0
+        },
+        "runs": ["1234", "1235", "1236"]
+      }

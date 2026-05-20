@@ -1,0 +1,12 @@
+__pycache__/
+**/__pycache__/
+venv/
+.venv/
+npa-backend/
+.env
+!.env.docker
+.env.example
+.git
+.gitignore
+.gitattributes
+.gitmodules
